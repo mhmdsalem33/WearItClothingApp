@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WearIt</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="tv_welcome">Welcome</string>
+    <string name="clothing_store">Clothing store!</string>
+    <string name="top_clothes">Top Clothes</string>
+    <string name="rightAddress"> The Right Address For \n Shopping Anyday</string>
+    <string name="rightAddress2">The Right Address \n For Shopping \n Anyday</string>
+    <string name="quality">It is new very easy to reach \nthe best quality among the products one the interest! </string>
+
+
+</resources>

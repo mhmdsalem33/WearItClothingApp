@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.loginRegisterFragment.LoginFragment">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvAppName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kleine."
+                    android:drawableStart="@drawable/ic_kleine_shape"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textStyle="bold"
+                    style="@style/h3"
+                    app:layout_constraintTop_toBottomOf="@+id/topGuide"
+                    app:layout_constraintStart_toStartOf="@+id/leftGuide"
+
+                    />
+
+                <TextView
+                    android:id="@+id/letslogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Let's Login"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_25ssp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAppName"
+                    app:layout_constraintStart_toStartOf="@+id/leftGuide"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/haveacount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account? Register"
+                    app:layout_constraintTop_toBottomOf="@+id/letslogin"
+                    app:layout_constraintStart_toStartOf="@id/leftGuide"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/linearlogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@+id/leftGuide"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuide"
+                    app:layout_constraintTop_toBottomOf="@+id/haveacount"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    >
+
+
+                    <EditText
+                        android:id="@+id/email_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/edtiedcustom"
+                        android:height="@dimen/_35sdp"
+                        android:hint="Email"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:textCursorDrawable="@drawable/curser_backgroundd"
+                        />
+
+                    <EditText
+                        android:id="@+id/password_Log"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/edtiedcustom"
+                        android:height="@dimen/_35sdp"
+                        android:hint="password"
+                        android:gravity="center"
+                        android:textCursorDrawable="@drawable/curser_backgroundd"
+                        android:inputType="textPassword"
+                        />
+                </LinearLayout>
+
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintStart_toStartOf="@id/leftGuide"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuide"
+                    app:layout_constraintTop_toBottomOf="@+id/linearlogin"
+                    android:background="@drawable/button_backgrounds"
+                    android:text="Login"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:textColor="@color/white"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/leftGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.10"
+
+                    />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/rightGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.90"
+
+
+                    />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/topGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.15"
+
+                    />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

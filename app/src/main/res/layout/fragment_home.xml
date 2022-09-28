@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.HomeFragment">
+
+    
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/logout"
+                app:layout_constraintEnd_toEndOf="@+id/right_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/linearHeader"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                />
+
+    <!--  Start Header -->
+    <LinearLayout
+        android:id="@+id/linearHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/right_guideline"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/search"
+            />
+        <!--
+        <LinearLayout
+            android:id="@+id/shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bag_background"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            >
+            <ImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:src="@drawable/bag"
+                app:tint="@color/white"
+                />
+        </LinearLayout>
+        -->
+
+    </LinearLayout>
+
+    <!--  End Header -->
+
+    <!-- start shop now -->
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/linearHeader"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        android:fontFamily="@font/myfont"
+        />
+    <TextView
+        android:id="@+id/tv_clothes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clothing_store"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        android:textStyle="bold"
+        android:textColor="@color/ramady"
+        android:fontFamily="@font/aaa"
+
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_show_now"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_140sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_clothes"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/right_guideline"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:backgroundTint="@color/zahry"
+        android:layout_marginTop="@dimen/_10sdp"
+
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ju"
+            android:scaleType="centerCrop"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/show_now_background"
+                android:padding="@dimen/_5sdp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Now"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/aaa"
+                    android:textSize="@dimen/_11ssp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!-- end shop now -->
+
+
+    <TextView
+        android:id="@+id/tv_top_clothing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/top_clothes"
+        app:layout_constraintTop_toBottomOf="@+id/card_show_now"
+        app:layout_constraintStart_toEndOf="@+id/left_guideline"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/ramady"
+        android:textStyle="bold"
+        android:fontFamily="@font/aaa"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/top_clothing_rec"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_top_clothing"
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93"
+        />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

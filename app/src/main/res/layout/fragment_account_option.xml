@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.loginRegisterFragment.AccountOptionFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/blury_background"
+        />
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="63dp"
+                tools:layout_editor_absoluteY="45dp">
+
+
+                <TextView
+                    android:id="@+id/tvAppName"
+                    style="@style/h3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_kleine_shape"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:text="Wearit."
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/topGuide"
+
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/tvRightAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:text="@string/rightAddress2"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/Guidenew"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuide"
+                    app:layout_constraintStart_toStartOf="@id/leftGuide"
+                    app:layout_constraintTop_toBottomOf="@+id/GuideName"
+                    android:gravity="center"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_quality"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:text="@string/quality"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuide"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/leftGuide"
+                    app:layout_constraintTop_toBottomOf="@+id/Guidenew"
+                    android:gravity="center"
+                    android:textSize="@dimen/_10ssp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/BottomGuide"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuide"
+                    app:layout_constraintStart_toStartOf="@+id/leftGuide"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_quality"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_register"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="Register"
+                        android:background="@drawable/button_backgrounds"
+                        android:textColor="@color/white"
+
+                        />
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/button"
+                        android:text="Login"
+                        app:backgroundTint="@color/g_blue_gray200"
+
+                        />
+
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/leftGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.20"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/rightGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.80"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/topGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.15"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/GuideName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.28"
+
+                    />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/Guidenew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.50"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/registerGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.50"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/BottomGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.90"
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
